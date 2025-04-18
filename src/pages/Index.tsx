@@ -1,5 +1,4 @@
-
-import { Upload, ArrowRight, RecycleBin, RefreshCw, ThumbsUp } from 'lucide-react';
+import { Upload, ArrowRight, Recycle, RefreshCw, ThumbsUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 
