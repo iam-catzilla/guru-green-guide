@@ -1,7 +1,8 @@
-
 import { Upload, ArrowRight, Recycle, FileSearch, BarChart3, Workflow, Leaf, Rocket, ThumbsUp, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
+import TechStack from '@/components/TechStack';
+import AnimatedBackground from '@/components/AnimatedBackground';
 
 const Index = () => {
   const scrollToContent = () => {
@@ -10,7 +11,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-secondary/50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-b from-secondary/5 to-background">
       <Navigation />
       
       {/* Hero Section with enhanced animations */}
@@ -73,6 +74,48 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* AI Analysis Section */}
+      <section className="py-20 px-4 relative overflow-hidden">
+        <div className="container mx-auto">
+          <div className="glass p-8 rounded-2xl">
+            <h2 className="text-3xl font-bold mb-8 animate-fade-up">AI-Powered Image Analysis</h2>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-6 animate-fade-up">
+                <p className="text-lg text-muted-foreground">
+                  Our advanced AI model can identify and categorize recyclable items with high accuracy.
+                  Simply upload an image, and let our technology do the work.
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    "Instant object recognition",
+                    "Material classification",
+                    "Recycling instructions",
+                    "Environmental impact assessment"
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-center gap-3">
+                      <span className="w-2 h-2 rounded-full bg-primary" />
+                      <span className="text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="order-first md:order-last">
+                <div className="glass p-6 rounded-xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1635241161466-541f065683ba"
+                    alt="AI Analysis"
+                    className="rounded-lg object-cover w-full h-64"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <TechStack />
 
       {/* Methodology Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-secondary/30 to-white/30 dark:from-gray-800/30 dark:to-gray-900/30 backdrop-blur-md">

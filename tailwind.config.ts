@@ -30,23 +30,34 @@ export default {
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#E8F5E9",
-          foreground: "#2E7D32",
+          DEFAULT: "#81C784",
+          foreground: "#FFFFFF",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#1E1E1E",
+          foreground: "#BDBDBD",
         },
         accent: {
-          DEFAULT: "#2E7D32",
+          DEFAULT: "#4CAF50",
           foreground: "#FFFFFF",
         },
       },
       keyframes: {
+        "blob-slow": {
+          "0%, 100%": {
+            transform: "translate(0, 0) scale(1)",
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.1)",
+          },
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.9)",
+          },
+        },
         "fade-up": {
           "0%": {
             opacity: "0",
@@ -57,18 +68,10 @@ export default {
             transform: "translateY(0)",
           },
         },
-        "fade-in": {
-          "0%": {
-            opacity: "0",
-          },
-          "100%": {
-            opacity: "1",
-          },
-        },
       },
       animation: {
+        "blob-slow": "blob-slow 15s infinite",
         "fade-up": "fade-up 0.5s ease-out",
-        "fade-in": "fade-in 0.5s ease-out",
       },
     },
   },
