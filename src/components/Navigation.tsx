@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { Button } from './ui/button';
@@ -8,7 +7,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b">
+    <nav className="fixed w-full bg-white/60 backdrop-blur-md z-50 border-b shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">

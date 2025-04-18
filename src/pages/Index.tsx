@@ -1,4 +1,3 @@
-
 import { Upload, ArrowRight, Recycle, RefreshCw, ThumbsUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
@@ -8,17 +7,17 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-secondary/50 to-white">
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section with enhanced animations */}
       <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-up">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-up hover:scale-105 transition-transform duration-300">
             Recycle Smarter with AI
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-up hover:text-primary transition-colors" style={{ animationDelay: "0.2s" }}>
             Upload a photo of any item and instantly learn how to dispose of it responsibly. Making recycling easy and accurate.
           </p>
           <div className="animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            <Button size="lg" className="text-lg px-8 hover:scale-105 transition-transform">
+            <Button size="lg" className="text-lg px-8 hover:scale-110 transition-transform duration-300 hover:shadow-lg">
               Try Now <Upload className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -59,10 +58,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* How it Works */}
+      {/* How it Works Section with enhanced animations */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 hover:text-primary transition-colors">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -83,11 +82,11 @@ const Index = () => {
             ].map((step, index) => (
               <div 
                 key={index} 
-                className="p-6 rounded-lg border bg-white hover:shadow-lg transition-shadow duration-300 animate-fade-up"
+                className="p-6 rounded-lg border bg-white hover:shadow-lg transition-all duration-300 animate-fade-up group"
                 style={{ animationDelay: `${0.2 * (index + 1)}s` }}
               >
-                <div className="mb-4">{step.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{step.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
